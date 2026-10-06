@@ -1,0 +1,59 @@
+.claude-plugin/marketplace.json
+  s_d47afaca7ca1d0::t_9aa16e06d3f222 1-11
+.claude-plugin/plugin.json
+  s_d47afaca7ca1d0::t_ecdd027622d726 1-7
+README.md
+  s_d47afaca7ca1d0::t_5c5cb491c4addf 1-35
+skills/plain-technical-english/SKILL.md
+  s_d47afaca7ca1d0::t_f033cc63c0afeb 1-116
+skills/plain-technical-english/evals/cases/01-jargon-memo/checks.json
+  s_d47afaca7ca1d0::t_ee7c00e8197547 1-27
+skills/plain-technical-english/evals/cases/01-jargon-memo/input.md
+  s_d47afaca7ca1d0::t_87787d33af18e5 1-12
+skills/plain-technical-english/evals/cases/01-jargon-memo/prompt.md
+  s_d47afaca7ca1d0::t_adcfc2a2078476 1
+skills/plain-technical-english/evals/cases/02-passive-procedure/checks.json
+  s_d47afaca7ca1d0::t_e3a8afe6474f7c 1-23
+skills/plain-technical-english/evals/cases/02-passive-procedure/input.md
+  s_d47afaca7ca1d0::t_7f8e332623ba9e 1-7
+skills/plain-technical-english/evals/cases/02-passive-procedure/prompt.md
+  s_d47afaca7ca1d0::t_b011cb6e4d9947 1
+skills/plain-technical-english/evals/cases/03-creative-preserve/checks.json
+  s_d47afaca7ca1d0::t_8a662abc04b674 1-20
+skills/plain-technical-english/evals/cases/03-creative-preserve/input.md
+  s_d47afaca7ca1d0::t_79f33032be2803 1-5
+skills/plain-technical-english/evals/cases/03-creative-preserve/prompt.md
+  s_d47afaca7ca1d0::t_798655b8eb8bd7 1
+skills/plain-technical-english/evals/cases/04-code-preservation/checks.json
+  s_d47afaca7ca1d0::t_106408d054fac4 1-30
+skills/plain-technical-english/evals/cases/04-code-preservation/input.md
+  s_d47afaca7ca1d0::t_040219ea3bed46 1-17
+skills/plain-technical-english/evals/cases/04-code-preservation/prompt.md
+  s_d47afaca7ca1d0::t_44911c0211f177 1
+skills/plain-technical-english/evals/cases/05-diataxis-howto/checks.json
+  s_d47afaca7ca1d0::t_5349c20587f9b4 1-24
+skills/plain-technical-english/evals/cases/05-diataxis-howto/prompt.md
+  s_d47afaca7ca1d0::t_7f42ac46bb394c 1-9
+skills/plain-technical-english/evals/cases/06-drafting-email/checks.json
+  s_d47afaca7ca1d0::t_2de352aa798236 1-30
+skills/plain-technical-english/evals/cases/06-drafting-email/prompt.md
+  s_d47afaca7ca1d0::t_7b9580d5e0a661 1-5
+skills/plain-technical-english/evals/evals.json
+  s_d47afaca7ca1d0::t_351ed7af37e01a 1-105
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b1749aa322c8ad35a8c5536af332a2851de0a279",
+  "prompts": {},
+  "sessions": {
+    "s_d47afaca7ca1d0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0aaefd0e-34d0-4a5b-ba1f-7f2ceed324ba",
+        "model": "unknown"
+      },
+      "human_author": "Jacob Martin <martinjaco@gmail.com>"
+    }
+  }
+}
