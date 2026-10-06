@@ -1,0 +1,30 @@
+{
+  "arms": ["baseline", "pte"],
+  "banned_phrases": [
+    "we are excited",
+    "we're excited",
+    "valued customers",
+    "in order to",
+    "out of an abundance of caution",
+    "we apologize for any inconvenience",
+    "please do not hesitate",
+    "at your earliest convenience",
+    "as part of our ongoing commitment",
+    "enhance your experience",
+    "leverage",
+    "seamless",
+    "utilize"
+  ],
+  "must_preserve": [
+    "September 30",
+    "/v1/detections",
+    "Authorization: Bearer",
+    "401",
+    "https://docs.example.com/auth-migration",
+    "api-support@example.com"
+  ],
+  "max_len_ratio": 0,
+  "max_words": 200,
+  "max_passive_per_100w": 3.0,
+  "judge_focus": "Is the email body under 200 words? Penalize any draft whose body exceeds the 200-word cap. Is the email honest about the security reason (log/referrer leakage) rather than euphemistic ('to improve security posture')? Are all six facts present and correct? Is it courteous without corporate mush? Is the required action unmistakable? Penalize burying the deadline or the action."
+}

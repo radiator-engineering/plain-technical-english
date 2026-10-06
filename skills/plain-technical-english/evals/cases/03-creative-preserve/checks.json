@@ -1,0 +1,20 @@
+{
+  "arms": ["baseline", "pte"],
+  "banned_phrases": [
+    "heart skipped a beat",
+    "blood ran cold",
+    "it goes without saying",
+    "no exception to the rule",
+    "at the end of the day",
+    "straw that broke the camel's back"
+  ],
+  "must_preserve": [
+    "leaning like a drunk apostle",
+    "the way you leave a marriage",
+    "a boat, of course, always a boat",
+    "vinegar smell of the brine vats"
+  ],
+  "max_len_ratio": 1.0,
+  "max_passive_per_100w": 100,
+  "judge_focus": "This is the false-positive test: did the editor cut ONLY the cliche-laden middle paragraph's dead language while preserving the deliberate voice — the tide/marriage simile, the drunk apostle, the paper boat ending? Heavily penalize flattening the first or third paragraph into plain report prose, shortening sentences that had deliberate rhythm, or converting the letter's arrival into bland summary. The middle paragraph should be rewritten or drastically cut; it must still convey that diocese letters mean bad news and this one did too."
+}

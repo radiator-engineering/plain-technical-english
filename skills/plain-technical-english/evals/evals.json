@@ -1,0 +1,105 @@
+{
+  "skill_name": "plain-technical-english",
+  "evals": [
+    {
+      "id": 0,
+      "eval_name": "jargon-memo",
+      "prompt": "Revise the internal memo at evals/cases/01-jargon-memo/input.md. Keep the meaning and all factual commitments (dates, names, systems). Make it clearer and more direct.",
+      "expected_output": "A shorter, direct memo with every fact intact and the corporate filler gone.",
+      "files": [
+        "evals/cases/01-jargon-memo/input.md"
+      ],
+      "expectations": [
+        "The revision contains none of the source memo's stock phrases: 'in today's fast-paced', 'it is important to note', 'holistically', 'in order to', 'operationalization', 'at the end of the day', 'leverage', 'best-in-class', 'actionable insights', 'it should be noted', 'spearheading', 'socialize a', 'needless to say', 'transformation journey', 'a testament to', 'crucial role', 'seamless', 'do not hesitate'",
+        "All factual commitments survive: September 15 sunset of the legacy StatsD collectors, Q3 prioritization of the metrics-pipeline migration, teams must finish instrumentation updates by the deadline, Dana Okafor's Platform team leads and will publish a migration playbook",
+        "The revised memo is at most 75% of the original's word count",
+        "The revision has at most 3 passive-voice constructions per 100 words",
+        "The memo still reads as a courteous message from Priya to the team, not a terse bullet dump"
+      ]
+    },
+    {
+      "id": 1,
+      "eval_name": "passive-procedure",
+      "prompt": "Rewrite the runbook section at evals/cases/02-passive-procedure/input.md as a clear operational procedure. Keep every command exactly as written. Keep all conditions and expected results.",
+      "expected_output": "An imperative, step-ordered procedure with all three commands byte-identical and every condition preserved.",
+      "files": [
+        "evals/cases/02-passive-procedure/input.md"
+      ],
+      "expectations": [
+        "All three commands appear byte-for-byte: 'nats stream info CLIPS --json | jq .state.messages', 'kubectl rollout restart deployment/ingest-worker -n ambience', 'kubectl rollout status deployment/ingest-worker -n ambience'",
+        "Instructions are direct imperatives with a clear actor; none of the source's passive scaffolding survives ('it should be verified', 'is to be restarted', 'is accomplished through', 'it is anticipated', 'in the event that', 'it is recommended that')",
+        "All three conditions survive: queue depth must be below 100 before the restart, pods are expected to be recreated in about two minutes, and a rollout stalled more than five minutes means page the on-call engineer and do not retry until the cause is found",
+        "The rewrite is no longer than 90% of the original's word count",
+        "The rewrite has at most 2 passive-voice constructions per 100 words"
+      ]
+    },
+    {
+      "id": 2,
+      "eval_name": "creative-voice",
+      "prompt": "Edit the opening passage of a literary short story at evals/cases/03-creative-preserve/input.md. The author wants it tightened \u2014 cut anything lazy or inherited \u2014 but the voice, rhythm, and imagery are deliberate and must survive.",
+      "expected_output": "The cliche-laden middle paragraph is rewritten or cut; the deliberate voice of paragraphs one and three survives intact.",
+      "files": [
+        "evals/cases/03-creative-preserve/input.md"
+      ],
+      "expectations": [
+        "All dead cliches are removed: 'heart skipped a beat', 'blood ran cold', 'it goes without saying', 'no exception to the rule', 'at the end of the day', 'straw that broke the camel's back'",
+        "The deliberate voice survives verbatim or near-verbatim: the tide-leaving-like-a-marriage simile, 'leaning like a drunk apostle', 'a boat, of course, always a boat', 'vinegar smell of the brine vats'",
+        "The edit still conveys that letters from the diocese never carry good news and this one was no different",
+        "The first and third paragraphs are not flattened into plain report prose \u2014 the long, deliberately rhythmic sentences are not chopped into short declaratives",
+        "The edited passage is no longer than the original"
+      ]
+    },
+    {
+      "id": 3,
+      "eval_name": "code-preservation",
+      "prompt": "Tighten the prose in the README section at evals/cases/04-code-preservation/input.md. Do not change any code, commands, flag names, or configuration values.",
+      "expected_output": "Much shorter prose; TOML block and every identifier untouched; all technical facts (defaults, ceiling, silent clamp) intact.",
+      "files": [
+        "evals/cases/04-code-preservation/input.md"
+      ],
+      "expectations": [
+        "The TOML code block is byte-identical to the source (bucket = \"ambience-clips\", max_concurrency = 8, retry_backoff_ms = 250, credentials_file = \"/var/secrets/gcs/sa.json\")",
+        "All identifiers and commands are intact: '--config-path', '/etc/clipd/config.toml', 'clipd serve --config-path /etc/clipd/config.toml', '/healthz'",
+        "All technical facts survive: TOML format, default config path, override flag, default max_concurrency of 8, hard ceiling of 32, and the daemon silently clamping values above 32",
+        "The filler is gone: 'highly configurable and robust', 'in order to', 'utilizes'/'utilization', 'it is worth mentioning', 'plays a crucial role', 'vast majority', 'find themselves in possession', 'last but not least', 'via the invocation of', 'through the issuance of'",
+        "The prose outside the code block is at most 70% of the original prose word count"
+      ]
+    },
+    {
+      "id": 4,
+      "eval_name": "diataxis-interplay",
+      "prompt": "Write a how-to guide: 'How to rotate a GCP service-account key used by a Kubernetes workload' \u2014 full assignment with pre-answered clarifying questions at evals/cases/05-diataxis-howto/prompt.md. Baseline arm uses documentation-writer alone; with-skill arm uses documentation-writer + plain-technical-english.",
+      "expected_output": "A Diataxis-conformant how-to whose prose also passes Orwell/STE discipline: imperative numbered steps, consistent terminology, expected results after commands, scope respected.",
+      "files": [
+        "evals/cases/05-diataxis-howto/prompt.md"
+      ],
+      "expectations": [
+        "The document is structured as a Diataxis how-to guide: goal-stated title, prerequisites, numbered action steps, and verification \u2014 with no tutorial hand-holding (it does not explain what a service account is) and no reference-style flag dump",
+        "Scope is respected: covers key creation, secret update, rollout, verification, and old-key deletion; mentions Workload Identity as the better long-term option in about one sentence; contains no Terraform and no CI automation",
+        "Each numbered step performs one main action; no step bundles several unrelated actions or code blocks under one heading",
+        "Each consequential command is followed by its stated expected result",
+        "Terminology is consistent: the service-account key and the Kubernetes Secret are kept distinct and each is called by one name throughout (not 'key'/'credential'/'secret' interchangeably for the same object)",
+        "The prose contains no stock filler: 'in order to', 'it is important to note', 'leverage', 'utilize', 'seamless', 'robust', 'crucial', 'simply', 'please note', 'navigate to', 'at this juncture'",
+        "The prose has at most 3.5 passive-voice constructions per 100 words",
+        "Before the old key is deleted, the guide verifies the old key is no longer in use (for example via Cloud Audit Logs) and states the limits of that check honestly, neither dropping the check nor overselling it",
+        "Before rotating, the guide discovers which workloads consume the Secret (so Deployments, StatefulSets, DaemonSets, and CronJobs are not missed)"
+      ]
+    },
+    {
+      "id": 5,
+      "eval_name": "breaking-change-email",
+      "prompt": "Draft a customer email announcing the /v1/detections auth breaking change \u2014 full assignment with facts and constraints at evals/cases/06-drafting-email/prompt.md.",
+      "expected_output": "A courteous, honest email under 200 words with all six facts, the real security reason, and an unmissable deadline and action.",
+      "files": [
+        "evals/cases/06-drafting-email/prompt.md"
+      ],
+      "expectations": [
+        "All six facts are present and correct: September 30 date, /v1/detections endpoint, switch to the Authorization: Bearer header, 401 after the date, https://docs.example.com/auth-migration, api-support@example.com",
+        "The email states the real reason \u2014 query-parameter keys leak into server logs and referrer headers \u2014 rather than a euphemism like 'to improve our security posture'",
+        "The body is under 200 words",
+        "The email contains no corporate mush: 'we are excited', 'valued customers', 'we apologize for any inconvenience', 'please do not hesitate', 'at your earliest convenience', 'as part of our ongoing commitment', 'enhance your experience', 'leverage', 'seamless', 'utilize', 'in order to'",
+        "The required action and the deadline appear in the subject or first two sentences of the body, not buried at the end"
+      ]
+    }
+  ]
+}

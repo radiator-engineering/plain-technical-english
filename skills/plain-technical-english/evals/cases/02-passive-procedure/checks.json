@@ -1,0 +1,23 @@
+{
+  "arms": ["baseline", "pte"],
+  "banned_phrases": [
+    "it should be verified",
+    "is to be restarted",
+    "is accomplished through",
+    "it is anticipated",
+    "in the event that",
+    "for a period exceeding",
+    "it is recommended that",
+    "remediated"
+  ],
+  "must_preserve": [
+    "nats stream info CLIPS --json | jq .state.messages",
+    "kubectl rollout restart deployment/ingest-worker -n ambience",
+    "kubectl rollout status deployment/ingest-worker -n ambience",
+    "100",
+    "five minutes"
+  ],
+  "max_len_ratio": 0.9,
+  "max_passive_per_100w": 2.0,
+  "judge_focus": "Are the instructions direct imperatives with the actor clear? Are all three conditions preserved (queue depth < 100 before, ~2 min pod recreation expectation, >5 min stall -> page and stop)? Penalize any lost condition or softened requirement."
+}

@@ -1,0 +1,30 @@
+{
+  "arms": ["baseline", "pte"],
+  "banned_phrases": [
+    "highly configurable and robust",
+    "in order to",
+    "utilizes",
+    "utilization",
+    "it is worth mentioning",
+    "plays a crucial role",
+    "vast majority",
+    "find themselves in possession",
+    "last but not least",
+    "via the invocation of",
+    "through the issuance of"
+  ],
+  "must_preserve": [
+    "bucket = \"ambience-clips\"",
+    "max_concurrency = 8",
+    "retry_backoff_ms = 250",
+    "credentials_file = \"/var/secrets/gcs/sa.json\"",
+    "--config-path",
+    "/etc/clipd/config.toml",
+    "clipd serve --config-path /etc/clipd/config.toml",
+    "/healthz",
+    "32"
+  ],
+  "max_len_ratio": 0.7,
+  "max_passive_per_100w": 3.0,
+  "judge_focus": "Is the TOML block byte-identical? Are all technical facts intact: default config path, override flag, default 8, ceiling 32, silent clamping behavior, health endpoint? Penalize any altered identifier or dropped technical fact (especially the silent clamp at 32)."
+}

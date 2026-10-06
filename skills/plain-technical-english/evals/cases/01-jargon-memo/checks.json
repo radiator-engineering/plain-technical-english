@@ -1,0 +1,27 @@
+{
+  "arms": ["baseline", "pte"],
+  "banned_phrases": [
+    "in today's fast-paced",
+    "it is important to note",
+    "holistically",
+    "in order to",
+    "operationalization",
+    "at the end of the day",
+    "leverage",
+    "best-in-class",
+    "actionable insights",
+    "it should be noted",
+    "spearheading",
+    "socialize a",
+    "needless to say",
+    "transformation journey",
+    "a testament to",
+    "crucial role",
+    "seamless",
+    "do not hesitate"
+  ],
+  "must_preserve": ["September 15", "Dana Okafor", "StatsD", "Q3"],
+  "max_len_ratio": 0.75,
+  "max_passive_per_100w": 3.0,
+  "judge_focus": "Did the revision preserve every factual commitment (deadline, owner, systems, expectation on teams)? Is it direct without becoming curt or losing the informational content? Penalize any dropped fact."
+}

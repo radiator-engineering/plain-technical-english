@@ -1,0 +1,24 @@
+{
+  "arms": ["baseline", "pte"],
+  "banned_phrases": [
+    "in order to",
+    "it is important to note",
+    "it's important to note",
+    "leverage",
+    "utilize",
+    "seamless",
+    "robust",
+    "delve",
+    "crucial",
+    "best practices dictate",
+    "navigate to",
+    "please note",
+    "simply",
+    "as mentioned above",
+    "at this juncture"
+  ],
+  "must_preserve": [],
+  "max_len_ratio": 0,
+  "max_passive_per_100w": 3.5,
+  "judge_focus": "Score BOTH frameworks: (1) Diataxis how-to conformance — problem-oriented recipe for a competent user, numbered actionable steps, prerequisites, verification; it must NOT drift into tutorial hand-holding (explaining what a service account is) or reference-dump (exhaustive flag tables). (2) Orwell/STE conformance — direct imperatives, one action per step, consistent terminology (does it call the same object 'key', 'credential', 'secret' interchangeably?), stated expected results after commands. Note specifically whether the two disciplines conflicted anywhere or reinforced each other, with quoted evidence."
+}

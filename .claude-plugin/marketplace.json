@@ -1,0 +1,11 @@
+{
+  "name": "plain-technical-english",
+  "owner": { "name": "Radiator Engineering" },
+  "plugins": [
+    {
+      "name": "plain-technical-english",
+      "source": "./",
+      "description": "Orwell's six rules and ASD-STE100 Simplified Technical English as a drafting and revision discipline for agents."
+    }
+  ]
+}

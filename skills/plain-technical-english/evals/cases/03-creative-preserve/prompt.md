@@ -1,0 +1,1 @@
+Edit this opening passage of a literary short story. The author wants it tightened — cut anything lazy or inherited — but the voice, rhythm, and imagery are deliberate and must survive. Return only the edited passage, no commentary.
